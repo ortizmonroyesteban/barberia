@@ -42,8 +42,8 @@ export default function BookingScreen() {
 
           <View style={styles.summary}>
             <Text style={styles.summaryTitle}>Reserva tu cita</Text>
-            <Text style={styles.summaryDetail}>✂️ {barbero?.nombre}</Text>
-            <Text style={styles.summaryDetail}>📅 {fecha} · 🕒 {hora.slice(0, 5)}</Text>
+            <Text style={styles.summaryDetail}>{barbero?.nombre}</Text>
+            <Text style={styles.summaryDetail}>{fecha} · {hora.slice(0, 5)}</Text>
           </View>
 
           <View style={styles.form}>
@@ -51,7 +51,7 @@ export default function BookingScreen() {
             <TextInput style={styles.input} placeholder="Tu nombre" placeholderTextColor="#666"
               value={nombre} onChangeText={setNombre} />
 
-            <Text style={styles.label}>Teléfono (opcional)</Text>
+            <Text style={styles.label}>Teléfono</Text>
             <TextInput style={styles.input} placeholder="Ej. 1122334455" placeholderTextColor="#666"
               value={telefono} onChangeText={(t) => setTelefono(t.replace(/[^0-9]/g, ""))}
               keyboardType="numeric" maxLength={15} />
